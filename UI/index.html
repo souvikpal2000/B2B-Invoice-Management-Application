@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/68b0726c11.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="logos">
+        <div class="abcProduct"></div>
+        <div class="highRadius"></div>
+    </div>
+    <div class="heading">Invoice List</div>
+    <div class="table-container">
+        <div class="buttons">
+            <button class="add"><i class="fas fa-plus">&nbsp;&nbsp;</i><span>  Add</span></button>
+            <button class="edit"><i class="fas fa-pencil-alt">&nbsp;&nbsp;</i>  Edit</span></button>
+            <button class="delete"><i class="fas fa-minus">&nbsp;&nbsp;</i>  Delete</span></button>
+            <i class="fas fa-search searchIcon"></i>
+            <input class="search" placeholder="Search by Invoice Number">
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr class='rowclass'>
+                        <th>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
+                        <th class="customerName">Customer Name</th>
+                        <th class="customer">Customer #</th>
+                        <th class="invoice">Invoice #</th>
+                        <th class="invoiceAmount">Invoice Amount</th>
+                        <th class="dueDate">Due Date</th>
+                        <th class="pred">Predicted Payment Date</th>
+                        <th class="note">Notes</th>
+                    </tr>  
+                </thead>
+                <tbody>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">--</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">15-Aug-2021</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">--</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">--</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">--</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">23-May-2021</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                    <tr class='rowclass'>
+                        <td>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </td>
+                        <td class="customerNameValue">Andrea James</td>
+                        <td class="customerValue">2523532</td>
+                        <td class="invoiceValue">12345678912</td>
+                        <td class="invoiceAmountValue">122.87K</td>
+                        <td class="dueDateValue">23-Jan-2021</td>
+                        <td class="predDate">--</td>
+                        <td class="noteValue">Lorem ipsum dolor...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="header">
+                <p>Delete record(s)?</p>
+            </div>
+            <div class="body">
+                You'll lose your record(s) after this action. We can't recover them once you delete.<br><br><br>
+                Are you sure you want to <span class="perDlt">permanently delete</span> them?
+            </div>
+            <div class="footer">
+                <button class="cancel">Cancel</span></button>
+                <button class="deleteModal">Delete</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>
