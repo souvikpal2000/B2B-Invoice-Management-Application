@@ -5,6 +5,8 @@ body{
 .logos{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .abcProduct{
     position: absolute;
@@ -18,7 +20,6 @@ body{
 .highRadius{
     position: absolute;
     top: 22px;
-    left: 650px;
     width: 235px;
     height: 50px;
     background: transparent url('../img/logo.svg') 0% 0% no-repeat padding-box;
@@ -100,7 +101,7 @@ body{
     top: 25px;
     left: 945px;
     width: 250px;
-    height: 35px;
+    height: 40px;
     border: 1px solid #97A1A9;
     border-radius: 10px;
     opacity: 1;
@@ -111,9 +112,18 @@ body{
 .searchIcon{
     position: absolute;
     top: 50px;
-    right: 45px;
+    right: 55px;
     top: 37px;
-    color: #97A1A9;
+    color: white
+}
+.hideSearch{
+    display: none;
+}
+input[type="search"]::-webkit-search-cancel-button{
+    position:relative;
+    right:15px;
+    background: url('../img/close.svg') no-repeat;  
+    cursor: pointer;
 }
 button:hover{
     border: 1px solid #14AFF1;
@@ -153,7 +163,7 @@ tr {
     background-color: #2A5368;
 }
 /* Hide the browser's default checkbox */
-.container input {
+.check-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -171,7 +181,7 @@ tr {
     justify-content: center;
 }
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.check-container input:checked ~ .checkmark {
     background-color: #2196F3;
 }
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -181,11 +191,11 @@ tr {
     display: none;
 }
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.check-container input:checked ~ .checkmark:after {
     display: block;
 }
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.check-container .checkmark:after {
     width: 2px;
     height: 5px;
     border: solid black;
@@ -227,7 +237,7 @@ tr:hover{
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: #000000a4;   
 }
 .modal-content {
     width: 500px;
@@ -297,4 +307,284 @@ tr:hover{
     left: 920px;
     background-color: #14AFF1;
     color: white;
+}
+/*Edit Modal*/
+.editModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 120px;
+}
+.edit-modal-content {
+    width: 400px;
+    height: 411px;
+    background: #2A3F4D 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 24px #00000029;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+.edit-header{
+    height: 50px;
+    border-bottom: 1px solid #1A262F;
+}
+.edit-header p{
+    position: absolute;
+    top: 190px;
+    left: 570px;
+    text-align: left;
+    font: normal normal normal 28px/32px Ubuntu;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.edit-body{
+    padding-top: 30px;
+    padding-left: 5px;
+    height: 270px;
+    border-bottom: 1px solid #1A262F;
+    color: #97A1A9;
+    font: normal normal normal 15px Ubuntu;
+}
+.invoiceAmt{
+    margin-left: 10px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    background-color: #283A46;
+    color: #97A1A9;
+    padding-left: 10px;
+}
+textarea {
+    resize: none;
+    outline: none;
+}
+textarea{
+    margin-left: 10px;
+    width: 247px;
+    height: 180px;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    background-color: #283A46;
+    color: #97A1A9;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 120px;
+}
+.notesSpan{
+    position: absolute;
+    top: 350px;
+}
+.cancelModal{
+    border: hidden;
+    background-color: #2A3E4C;
+    color: #14AFF1;
+    font: normal normal normal 15px Ubuntu;
+    outline: none;
+}
+.edit-footer{
+    position: absolute;
+    top: 60px;
+    left: -3px;
+
+}
+.reset, .editBtn, .clear, .addBtn{
+    width: 80px;
+    height: 40px;
+    border: 1px solid #97A1A9;
+    border-radius: 10px;
+    opacity: 1;
+    background-color: #273D49CC;
+    color: white;
+    cursor: pointer;
+}
+.reset{
+    position: absolute;
+    top: 525px;
+    left: 780px;
+    color: white;
+}
+.editBtn{
+    position: absolute;
+    top: 585px;
+    left: 875px;
+    background-color: #14AFF1;
+    color: white;
+}
+.cancelModal{
+    position: absolute;
+    top: 535px;
+    left: 590px;
+}
+.cancelModal:hover{
+    border: hidden;
+}
+/*Add Modal*/
+.addModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 120px;
+}
+.add-modal-content{
+    width: 850px;
+    height: 350px;
+    background: #2A3F4D 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 24px #00000029;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+.add-header{
+    height: 50px;
+    border-bottom: 1px solid #1A262F;
+}
+.add-header p{
+    position: absolute;
+    top: 190px;
+    left: 350px;
+    text-align: left;
+    font: normal normal normal 28px/32px Ubuntu;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.add-body{
+    padding-top: 25px;
+    padding-left: 5px;
+    height: 220px;
+    border-bottom: 1px solid #1A262F;
+    color: #97A1A9;
+    font: normal normal normal 15px Ubuntu;
+}
+.add-body input{
+    margin-left: 10px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    background-color: #283A46;
+    color: #97A1A9;
+    padding-left: 10px;
+}
+.customer-Name{
+    position: relative;
+    left: 10px;
+}
+.customer-No{
+    position: relative;
+    left: 35px;
+}
+.invoice-No{
+    position: relative;
+    left: 52px;
+}
+.invoice-Amount{
+    position: relative;
+    left: 16px;
+}
+.dueDates{
+    position: relative;
+    top: -205px;
+    left: 495px;
+}
+.notes{
+    position: relative;
+    top: -200px;
+    left: 420px;
+}
+.notes-Amt{
+    height: 120px;
+    position: absolute;
+    top: 25px;
+    right: 420px;
+}
+.note-s{
+    position: relative;
+    top: 30px;
+    right: -75px;
+}
+.cancelAddModal{
+    border: hidden;
+    background-color: #2A3E4C;
+    color: #14AFF1;
+    font: normal normal normal 15px Ubuntu;
+    outline: none;
+}
+.cancelAddModal:hover{
+    border: hidden;
+}
+.add-footer{
+    position: relative;
+    top: 15px;
+}
+.addBtn{
+    position: absolute;
+    top: 529px;
+    right: 345px;
+    background-color: #14AFF1;
+    color: white;
+}
+.clear{
+    position: absolute;
+    left: 670px;
+}
+.cancelAddModal{
+    position: relative;
+    top: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: relative;
+    right: 10px;
+    top: 2px;
+    color: white;
+    background: url('../img/calendar.svg') no-repeat;
+    width: 8px;
+    filter: invert(1);
+    cursor: pointer;
+}
+.leftArrow, .rightArrow{
+    width: 40px;
+    height: 40px;
+    background: #39495E 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 6px #00000069;
+    opacity: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-chevron-left, .fa-chevron-right{
+    color: white;
+}
+.leftArrow:hover, .rightArrow:hover{
+    background-color: #14AFF1;
+}
+.leftArrow{
+    position: relative;
+    top: 400px;
+    left: 25px;
+}
+.rightArrow{
+    position: absolute;
+    top: 405px;
+    right: 35px;
 }

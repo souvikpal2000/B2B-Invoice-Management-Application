@@ -17,17 +17,17 @@
     <div class="table-container">
         <div class="buttons">
             <button class="add"><i class="fas fa-plus">&nbsp;&nbsp;</i><span>  Add</span></button>
-            <button class="edit"><i class="fas fa-pencil-alt">&nbsp;&nbsp;</i>  Edit</span></button>
-            <button class="delete"><i class="fas fa-minus">&nbsp;&nbsp;</i>  Delete</span></button>
+            <button class="edit disable" disabled><i class="fas fa-pencil-alt">&nbsp;&nbsp;</i>  Edit</span></button>
+            <button class="delete disable" disabled><i class="fas fa-minus">&nbsp;&nbsp;</i>  Delete</span></button>
             <i class="fas fa-search searchIcon"></i>
-            <input class="search" placeholder="Search by Invoice Number">
+            <input class="search" placeholder="Search by Invoice Number" type="search" onkeyup="hideSearch()">
         </div>
         <div class="table">
             <table>
                 <thead>
                     <tr class='rowclass'>
                         <th>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -44,7 +44,7 @@
                 <tbody>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -59,7 +59,7 @@
                     </tr>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -89,7 +89,7 @@
                     </tr>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -104,7 +104,7 @@
                     </tr>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -119,7 +119,7 @@
                     </tr>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -134,7 +134,7 @@
                     </tr>
                     <tr class='rowclass'>
                         <td>
-                            <label class="container">
+                            <label class="check-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
@@ -151,6 +151,8 @@
             </table>
         </div>
     </div>
+    <div class="leftArrow"><i class="fas fa-chevron-left"></i></div>
+    <div class="rightArrow"><i class="fas fa-chevron-right"></i></div>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -164,6 +166,69 @@
             <div class="footer">
                 <button class="cancel">Cancel</span></button>
                 <button class="deleteModal">Delete</span></button>
+            </div>
+        </div>
+    </div>
+    <div id="editModal" class="editModal">
+        <div class="edit-modal-content">
+            <span class="close">&times;</span>
+            <div class="edit-header">
+                <p>Edit Invoice</p>
+            </div>
+            <form>
+                <div class="edit-body">
+                    <span>Invoice Amount</span>
+                    <input type="text" class="invoiceAmt"><br><br>
+                    <span class="notesSpan">Notes</span>
+                    <textarea class="notesAmt" rows="4" cols="50"></textarea>
+                </div>
+                <button class="editBtn">Save</span></button>
+            </form>
+            <div class="edit-footer">
+                <button class="cancelModal">Cancel</button>
+                <button class="reset">Reset</span></button> 
+            </div>
+        </div>
+    </div>
+    <div id="addModal" class="addModal">
+        <div class="add-modal-content">
+            <span class="close">&times;</span>
+            <div class="add-header">
+                <p>Add Invoice</p>
+            </div>
+            <form class="addForm">
+                <div class="add-body">
+                    <div class="customerNames">
+                        <span>Customer Names<span style="color:#ff0000"> *</span></span>
+                        <input type="text" class="customer-Name">
+                    </div><br>
+                    <div class="customerNo">
+                        <span>Customer No<span style="color:#ff0000"> *</span></span>
+                        <input type="text" class="customer-No">
+                    </div><br>
+                    <div class="invoiceNo">
+                        <span>Invoice No<span style="color:#ff0000"> *</span></span>
+                        <input type="text" class="invoice-No">
+                    </div><br>
+                    <div class="invoiceAmounts">
+                        <span>Invoice Amount<span style="color:#ff0000"> *</span></span>
+                        <input type="text" class="invoice-Amount">
+                    </div><br>
+                    <div class="dueDates">
+                        <span>Due Date<span style="color:#ff0000"> *</span></span>
+                        <input type="date" class="due-Date" id="due-Date">
+                    </div>
+                    <div class="notes">
+                        <span class="note-s">Notes</span>
+                        <textarea class="notes-Amt" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                <button class="addBtn">Add</button>
+            </form>
+
+            <div class="add-footer">
+                <button class="cancelAddModal">Cancel</button>
+                <button class="clear">Clear</button>
             </div>
         </div>
     </div>
